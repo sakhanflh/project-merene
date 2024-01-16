@@ -2,6 +2,10 @@
     font-family: 'Mosk';
     src: url(/fontFamily/Mosk_Typeface/Mosk\ Normal\ 400.ttf);
 }
+@font-face {
+    font-family: 'Graphik';
+    src: url(fontFamily/Graphik-Font-Family/GraphikRegular.otf);
+}
 /* 
 .font2 {
     font-family: 'Mosk';
