@@ -34,7 +34,7 @@
     }
 
     aside {
-        width: 10%;
+        width: 11%;
         /* background-color: yellow; */
         height: 100vh;
         display: flex;
@@ -52,7 +52,7 @@
         margin-top: 400px;
     }
     .main-wrapper {
-        width: 85%;
+        width: 80%;
         /* background-color: green; */
         height: 100vh;
         display: flex;
@@ -103,6 +103,10 @@
         border: 1px solid black;
         justify-content: center;
         border-radius: 10px;
+        transition: 0.5s;
+    }
+    .menu:hover {
+        transform: scale(0.9);
     }
     .whatsapp {
         width: 12rem;
@@ -113,6 +117,10 @@
         border: 1px solid black;
         justify-content: center;
         border-radius: 10px;
+        transition: 0.5s;
+    }
+    .whatsapp:hover {
+        transform: scale(0.9);
     }
     .location {
         width: 12rem;
@@ -123,7 +131,29 @@
         border: 1px solid black;
         justify-content: center;
         border-radius: 10px;
-        
+        transition: 0.5s;
+    }
+    .location:hover {
+        transform: scale(0.9);
+    }
+    .gofood {
+        width: 12rem;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid black;
+        gap: 1rem;
+        justify-content: center;
+        border-radius: 10px;
+        transition: 0.5s;
+    }
+    .gofood img {
+        width: 30%;
+        height: 90%;
+        object-fit: cover;
+    }
+    .gofood:hover {
+        transform: scale(0.9);
     }
     /* Absolute Img */
     .merene-bird {
@@ -136,5 +166,5 @@
         height: 100%;
     }
     /* Absolute Img End */
-
+    
 }
