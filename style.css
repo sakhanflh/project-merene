@@ -101,8 +101,7 @@ body {
     }
 
     .main-wrapper {
-        width: 90%;
-        /* background-color: green; */
+        width: 82%;
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -111,11 +110,11 @@ body {
     }
 
     .logo {
-        width: 100%;
+        width: 82%;
         height: 5rem;
         display: flex;
         justify-content: end;
-        /* background-color: gray; */
+        position: absolute;
     }
     .logo img {
         height: 100%;
