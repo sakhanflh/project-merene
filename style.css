@@ -93,6 +93,7 @@
     margin: 0;
     user-select: none;
     -webkit-tap-highlight-color: transparent !important;
+    overflow-x: hidden;
 }
 html {
     overflow-x: hidden;
