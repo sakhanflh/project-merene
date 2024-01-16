@@ -135,6 +135,7 @@ section.active {
 
     .background {
         opacity: 5%;
+        overflow-x: hidden;
     }
 
     main {
