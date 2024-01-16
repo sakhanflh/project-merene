@@ -241,7 +241,7 @@ section.active {
         gap: 15px;
     }
     
-    /* .menu {
+    .menu {
         width: 12rem;
         height: 4rem;
         display: flex;
@@ -303,7 +303,8 @@ section.active {
     .gofood:hover {
         transform: scale(0.95);
         box-shadow: 3px 3px 10px #c5c5c5;
-    } */
+    }
+
     /* Absolute Img */
     .merene-bird {
         position: absolute;
