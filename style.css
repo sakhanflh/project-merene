@@ -2,31 +2,62 @@
     font-family: 'Mosk';
     src: url(/fontFamily/Mosk_Typeface/Mosk\ Normal\ 400.ttf);
 }
+
+@font-face {
+    font-family: 'Graphik';
+    src: url(/fontFamily/Graphik-Font-Family/GraphicRegular.otf) format('otf'); 
+}
 /* 
 .font2 {
     font-family: 'Mosk';
 } */
 
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    overflow-x: hidden;
+}
+body {
+    /* background-color: #fafafa; */
+    background: rgb(218,218,218);
+    background: linear-gradient(135deg, rgba(218,218,218,1) 0%, rgba(243,243,243,1) 35%, rgba(253,251,251,1) 100%);
+    height: 100dvh;
+    overflow-y: hidden;
+    position: relative;
+    font-family: 'Graphik', sans-serif;
+}
+
+.background {
+    position: absolute;
+    width: 1500px;
+    top: -300px;
+    opacity: 20%;
+}
+
+
 @media only screen and (max-width: 480px) {
-    * {
-        padding: 0;
-        margin: 0;
-    }
-    html {
-        overflow-x: hidden;
+
+    .background {
+        opacity: 5%;
     }
 
     main {
         display: flex;
         justify-content: center;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
     }
 
     section {
         width: 100vw;
         max-width: 100vw;
-        height: 100vh;
-        max-height: 100vh;
+        width: 100%;
+        height: 100dvh;
         padding: 5% 5%;
+        overflow-y: hidden;
     }
 
     .main-container {
@@ -34,29 +65,49 @@
     }
 
     aside {
-        width: 11%;
+        width: 10%;
         /* background-color: yellow; */
-        height: 100vh;
+        height: 100dvh;
         display: flex;
         flex-direction: column;
         box-sizing: border-box;
-        align-items: center;
-        overflow: hidden;
-        justify-content: space-around;
-        
+        align-items: start;
     }
     aside h1 {
         transform: rotate(-90deg);
         font-size: 50px;
         font-family: 'Mosk';
-        margin-top: 400px;
+        position: absolute;
+        bottom: 20%;
+        left: -30px;
     }
-    .main-wrapper {
-        width: 80%;
-        /* background-color: green; */
-        height: 100vh;
+
+    aside h1::after {
+        content: 'morene';
+        font-size: 50px;
+        display: block;
+        opacity: 10%;
+        color: black;
+        position: absolute;
+        bottom: -10px;
+        left: -20px;
+    }
+
+    .head {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .main-wrapper {
+        width: 90%;
+        /* background-color: green; */
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        box-sizing: border-box;
     }
 
     .logo {
@@ -65,7 +116,6 @@
         display: flex;
         justify-content: end;
         /* background-color: gray; */
-        padding-left: 2rem;
     }
     .logo img {
         height: 100%;
@@ -88,10 +138,16 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 2rem;
     }
     .desc {
         text-align: center;
+    }
+
+    .service-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
     
     .menu {
@@ -103,10 +159,13 @@
         border: 1px solid black;
         justify-content: center;
         border-radius: 10px;
-        transition: 0.5s;
+        transition: 0.3s;
+        margin-top: 20px;
     }
+
     .menu:hover {
-        transform: scale(0.9);
+        transform: scale(0.95);
+        box-shadow: 3px 3px 10px #c5c5c5;
     }
     .whatsapp {
         width: 12rem;
@@ -117,10 +176,11 @@
         border: 1px solid black;
         justify-content: center;
         border-radius: 10px;
-        transition: 0.5s;
+        transition: 0.3s;
     }
     .whatsapp:hover {
-        transform: scale(0.9);
+        transform: scale(0.95);
+        box-shadow: 3px 3px 10px #c5c5c5;
     }
     .location {
         width: 12rem;
@@ -131,10 +191,11 @@
         border: 1px solid black;
         justify-content: center;
         border-radius: 10px;
-        transition: 0.5s;
+        transition: 0.3s;
     }
     .location:hover {
-        transform: scale(0.9);
+        transform: scale(0.95);
+        box-shadow: 3px 3px 10px #c5c5c5;
     }
     .gofood {
         width: 12rem;
@@ -145,26 +206,259 @@
         gap: 1rem;
         justify-content: center;
         border-radius: 10px;
-        transition: 0.5s;
+        transition: 0.3s;
     }
     .gofood img {
-        width: 30%;
-        height: 90%;
-        object-fit: cover;
+        filter: grayscale(100);
     }
     .gofood:hover {
-        transform: scale(0.9);
+        transform: scale(0.95);
+        box-shadow: 3px 3px 10px #c5c5c5;
     }
     /* Absolute Img */
     .merene-bird {
         position: absolute;
-        top: 600px;
-        height: 15rem;
-        opacity: 10%;
+        bottom: -150px;
+        opacity: 15%;
+        width: 40rem;
     }
-    .merene-bird img {
-        height: 100%;
+
+    .list {
+        background-color: white;
+        border: none;
+        box-shadow: 3px 3px 30px rgb(197, 197, 197, 30%),
+        -3px -3px 10px #ffff;
+        z-index: 10;
+        height: 3.5rem;
+        padding: 0 50px;
+        width: 15rem;
+        text-align: start;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .list img {
+        width: 30px;
+
     }
     /* Absolute Img End */
     
 }
+
+
+@media only screen and (min-width: 600px) {
+    .background {
+        opacity: 8%;
+    }
+    main {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        height: 100%;
+    }
+
+    aside {
+        position: absolute;
+        left: -50px;
+        bottom: 20%;
+    }
+
+    aside h1 {
+        transform: rotate(-90deg);
+        font-size: 100px;
+        font-family: 'Mosk';
+        position: absolute;
+        bottom: 20%;
+        left: 0px;
+    }
+
+    aside h1::after {
+        content: 'morene';
+        font-size: 100px;
+        display: block;
+        opacity: 5%;
+        color: black;
+        position: absolute;
+        bottom: -20px;
+        left: -20px;
+    }
+
+    section {
+        width: 100%;
+        padding: 20px 8%;
+        box-sizing: border-box;
+    }
+
+    /* aside h1::after{
+        content: 'merene';
+        position: absolute;
+        font-size: 100px;
+    } */
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 70px;
+    }
+
+
+    .main-wrapper {
+        width: 100%;
+    }
+
+    .service-list {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+
+    .head {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-img {
+        width: 300px;
+    }
+
+    .main-img img {
+        width: 100%;
+    }
+
+    .desc p{
+        font-size: 18px;
+    }
+
+    .list {
+        background-color: white;
+        border: none;
+        box-shadow: 3px 3px 30px rgb(197, 197, 197, 100%),
+        -5px -2px 10px #ffff;
+        z-index: 10;
+        padding: 0 70px;
+        text-align: start;
+        box-sizing: border-box;
+        justify-content: space-between;
+        width: 20rem;
+        height: 5rem;
+        margin-top: 8px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+
+    }
+
+    .list img {
+        width: 40px;
+    }
+
+    .list p {
+        font-size: 20px;
+        font-weight: 600;
+    }
+
+    .merene-bird {
+        width: 70rem;
+        opacity: 15%;
+        right: -10px;
+        bottom: -100px;
+        position: absolute;
+    }
+}
+
+
+@media only screen and (min-width: 1100px){
+    .background {
+        top: -450px;
+        opacity: 5%;
+    }
+
+    main {
+        height: 100dvh;
+        width: 100%;
+        max-width: 1300px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    section {
+        height: 100vh;
+    }
+
+    aside h1 {
+        transform: rotate(-90deg);
+        font-size: 100px;
+        font-family: 'Mosk';
+        position: absolute;
+        bottom: 20%;
+        left: 0px;
+    }
+
+    aside h1::after {
+        content: 'morene';
+        font-size: 100px;
+        display: block;
+        opacity: 10%;
+        color: black;
+        position: absolute;
+        bottom: -20px;
+        left: -25px;
+    }
+
+    .logo {
+        height: 100px;
+        margin: 0;
+    }
+
+    .main {
+        margin: -60px 0 0 0;
+        gap: 30px;
+        justify-content: start;
+        box-sizing: border-box;
+    }
+
+    .main-img {
+        z-index: 50;
+        width: 250px;
+    }
+
+    .service-list {
+        gap: 10px;
+    }
+
+    .list {
+        height: 4rem;
+        width: 17rem;
+        padding: 0 40px;
+    }
+
+    .gofood img {
+        width: 70px;
+        transform: translateX(-13px);
+    }
+
+    .merene-bird {
+        width: 1300px;
+        bottom: -200px;
+        right: -20px;
+        opacity: 5%;
+        position: absolute;
+    }
+}
+
