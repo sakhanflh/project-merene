@@ -92,10 +92,10 @@
     padding: 0;
     margin: 0;
     user-select: none;
+    -webkit-tap-highlight-color: transparent !important;
 }
 html {
     overflow-x: hidden;
-    user-select: none;
 }
 body {
     /* background-color: #fafafa; */
