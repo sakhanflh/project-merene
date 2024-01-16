@@ -29,6 +29,11 @@ body {
     font-family: 'Graphik', sans-serif;
 }
 
+a {
+        text-decoration: none;
+        color: black;
+    }
+
 .background {
     position: absolute;
     width: 1500px;
@@ -150,7 +155,7 @@ body {
         gap: 15px;
     }
     
-    .menu {
+    /* .menu {
         width: 12rem;
         height: 4rem;
         display: flex;
@@ -208,13 +213,11 @@ body {
         border-radius: 10px;
         transition: 0.3s;
     }
-    .gofood img {
-        filter: grayscale(100);
-    }
+    
     .gofood:hover {
         transform: scale(0.95);
         box-shadow: 3px 3px 10px #c5c5c5;
-    }
+    } */
     /* Absolute Img */
     .merene-bird {
         position: absolute;
@@ -230,16 +233,31 @@ body {
         -3px -3px 10px #ffff;
         z-index: 10;
         height: 3.5rem;
-        padding: 0 50px;
         width: 15rem;
-        text-align: start;
         box-sizing: border-box;
-        justify-content: space-between;
+        display: flex;
+        padding: 0 40px 0 0;
+        justify-content: center;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .list div:first-child {
+        width: 50px;
+    }
+
+    .list p {
+        font-weight: 600;
+        
     }
 
     .list img {
         width: 30px;
-
+    }
+    .gofood img {
+        filter: grayscale(100);
+        width: 100%;
+        transform: translateX(-10px);
     }
     /* Absolute Img End */
     
@@ -349,10 +367,10 @@ body {
         box-shadow: 3px 3px 30px rgb(197, 197, 197, 100%),
         -5px -2px 10px #ffff;
         z-index: 10;
-        padding: 0 70px;
+        padding: 0 50px 0 0;
         text-align: start;
         box-sizing: border-box;
-        justify-content: space-between;
+        justify-content: center;
         width: 20rem;
         height: 5rem;
         margin-top: 8px;
@@ -369,6 +387,16 @@ body {
     .list p {
         font-size: 20px;
         font-weight: 600;
+    }
+
+    .list div:first-child {
+        width: 70px;
+    }
+
+    .gofood img {
+        filter: grayscale(100);
+        width: 100%;
+        transform: translateX(-10px);
     }
 
     .merene-bird {
@@ -440,12 +468,17 @@ body {
 
     .service-list {
         gap: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
     }
 
     .list {
         height: 4rem;
         width: 17rem;
-        padding: 0 40px;
+        padding: 0 50px 0 0;
+        background-color: white;
+        z-index: 50;
     }
 
     .gofood img {
@@ -459,6 +492,7 @@ body {
         right: -20px;
         opacity: 5%;
         position: absolute;
+        z-index: -10;
     }
 }
 
