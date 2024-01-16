@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Graphik';
-    src: url(/fontFamily/Graphik-Font-Family/GraphicRegular.otf) format('otf'); 
+    src: url(/fontFamily/Graphik-Font-Family/GraphicRegular.otf); 
 }
 
 /* LOADERS */
@@ -160,7 +160,6 @@ section.active {
 
     aside {
         width: 10%;
-        /* background-color: yellow; */
         height: 100dvh;
         display: flex;
         flex-direction: column;
@@ -173,7 +172,7 @@ section.active {
         font-family: 'Mosk';
         position: absolute;
         bottom: 20%;
-        left: -30px;
+        left: -41px;
     }
 
     aside h1::after {
@@ -199,7 +198,6 @@ section.active {
         height: 100%;
         display: flex;
         flex-direction: column;
-        padding-top: 10px;
         box-sizing: border-box;
     }
 
@@ -231,10 +229,12 @@ section.active {
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-top: 5rem;
         gap: 2rem;
     }
     .desc {
         text-align: center;
+        font-family: 'Graphik';
     }
 
     .service-list {
@@ -254,8 +254,9 @@ section.active {
         border-radius: 10px;
         transition: 0.3s;
         margin-top: 20px;
+        font-family: 'Graphik';
     }
-
+    
     .menu:hover {
         transform: scale(0.95);
         box-shadow: 3px 3px 10px #c5c5c5;
@@ -270,6 +271,7 @@ section.active {
         justify-content: center;
         border-radius: 10px;
         transition: 0.3s;
+        font-family: 'Graphik';
     }
     .whatsapp:hover {
         transform: scale(0.95);
@@ -285,6 +287,7 @@ section.active {
         justify-content: center;
         border-radius: 10px;
         transition: 0.3s;
+        font-family: 'Graphik';
     }
     .location:hover {
         transform: scale(0.95);
@@ -300,6 +303,7 @@ section.active {
         justify-content: center;
         border-radius: 10px;
         transition: 0.3s;
+        font-family: 'Graphik';
     }
     
     .gofood:hover {
