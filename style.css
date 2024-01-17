@@ -21,6 +21,12 @@
     align-items: center;
 }
 
+.pattern {
+    position: absolute;
+    opacity: 80%;
+    filter: grayscale(100);
+}
+
 .load-img {
     width: 200px;
     position: relative;
